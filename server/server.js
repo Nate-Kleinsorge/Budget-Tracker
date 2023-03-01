@@ -1,12 +1,13 @@
+const path = require('path');
 const express = require('express');
 const app = express();
+
 const PORT = process.env.PORT || 3002;
+const BUILD_PATH = path.resolve("../client/build");
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use(express.static(BUILD_PATH))
 
-app.get("/ping", (req, res) => {
+app.get("/ping", (req, res) => {s
     res.send("pong");
 });
 
