@@ -1,13 +1,5 @@
-import { useQuery, gql } from "@apollo/client";
-
-const QUERY_PING = gql`
-  query {
-    ping {
-      message
-      timestamp
-    }
-  }
-`
+import { useQuery } from "@apollo/client";
+import { QUERY_PING } from './utils/queries';
 
 function App() {
   const { data, loading, error } = useQuery(QUERY_PING);
