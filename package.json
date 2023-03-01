@@ -7,7 +7,8 @@
     "start": "npm start --prefix server",
     "install": "npm i --prefix server && npm i --prefix client",
     "build": "npm run build --prefix client",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nf --procfile Procfile.dev start"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "homepage": "https://github.com/Nate-Kleinsorge/Budget-Tracker#readme",
   "engines": {
     "node": "16.x"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   }
 }
