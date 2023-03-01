@@ -7,7 +7,7 @@ const BUILD_PATH = path.resolve("../client/build");
 
 app.use(express.static(BUILD_PATH))
 
-app.get("/ping", (req, res) => {s
+app.get("/ping", (req, res) => {
     res.send("pong");
 });
 
