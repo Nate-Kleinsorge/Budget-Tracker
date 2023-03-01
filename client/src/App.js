@@ -1,18 +1,23 @@
-import { useState } from 'react';
+import { useQuery, gql } from "@apollo/client";
+
+const QUERY_PING = gql`
+  query {
+    ping {
+      message
+      timestamp
+    }
+  }
+`
 
 function App() {
-  const [message, setMessage] = useState("");
-  const ping = async () => {
-    const response = await fetch("/ping");
-    const data = await response.text();
-    setMessage(data);
-  }
+  const { data, loading, error } = useQuery(QUERY_PING);
+  const ping = data?.ping;
+  const display = loading || error || `${ping.message} - ${ping.timestamp}`
   return (
     <>
       <h1>Budget Tracker</h1>
       <h2>coming soon!</h2>
-      <button onClick={ping}>ping the server</button>
-      <p>server respsonded: {message}</p>
+      <p>ping: {display}</p>
     </>
   );
 }
