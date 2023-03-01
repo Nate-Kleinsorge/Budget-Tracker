@@ -1,16 +1,24 @@
-import { useQuery } from "@apollo/client";
-import { QUERY_PING } from './utils/queries';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from 'components/Header.js';
+import Footer from 'components/Footer.js';
+import Dashboard from 'pages/Dashboard.js';
+import Budget from 'pages/Budget.js';
+import About from 'pages/About.js';
+
 
 function App() {
-  const { data, loading, error } = useQuery(QUERY_PING);
-  const ping = data?.ping;
-  const display = loading || error || `${ping.message} - ${ping.timestamp}`
   return (
-    <>
-      <h1>Budget Tracker</h1>
-      <h2>coming soon!</h2>
-      <p>ping: {display}</p>
-    </>
+    <BrowserRouter>
+      <Header />
+      <main>
+        <Routes>
+          <Route to="/" element={<Dashboard />} />
+          <Route to="/budget" element={<Budget />} />
+          <Route to="/about" element={<About />} />
+        </Routes>
+      </main>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
