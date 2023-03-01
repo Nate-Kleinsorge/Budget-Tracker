@@ -2,7 +2,7 @@
 
 ## Deployed Website
 
-[Budget Tracker](https://github.com/Nate-Kleinsorge/Budget-Tracker)
+[Budget Tracker](https://ancient-peak-64491.herokuapp.com/)
 
 ## Description
 
