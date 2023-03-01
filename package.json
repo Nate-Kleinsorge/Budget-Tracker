@@ -1,0 +1,24 @@
+{
+  "name": "budget-tracker",
+  "version": "1.0.0",
+  "description": "## Deployed Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start --prefix server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nate-Kleinsorge/Budget-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nate-Kleinsorge/Budget-Tracker/issues"
+  },
+  "homepage": "https://github.com/Nate-Kleinsorge/Budget-Tracker#readme",
+  "engines": {
+    "node": "16.x"
+  }
+}
