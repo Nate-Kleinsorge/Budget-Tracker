@@ -24,10 +24,6 @@ await server.start();
 app.use(express.static(BUILD_PATH))
 app.use('/graphql', express.json(), expressMiddleware(server));
 
-app.get("/ping", (req, res) => {
-    res.send("pong");
-});
-
 httpServer.listen({  port: PORT }, () => {
   console.log(`server running on port ${PORT}`)
 })
