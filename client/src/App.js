@@ -1,23 +1,31 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Header from 'components/Header.js';
 import Footer from 'components/Footer.js';
+import Home from 'pages/Home.js';
 import Dashboard from 'pages/Dashboard.js';
 import Budget from 'pages/Budget.js';
 import About from 'pages/About.js';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <main>
-        <Routes>
-          <Route path='/' element={<Dashboard />} />
-          <Route path='/Budget' element={<Budget />} />
-          <Route path='/about' element={<About />} />
-        </Routes>
-      </main>
-      <Footer />
-    </BrowserRouter>
+    <HelmetProvider >
+      <Helmet>
+        <title>Budget Tracker</title>
+      </Helmet>
+      <BrowserRouter>
+        <Header />
+        <main>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/budget' element={<Budget />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 

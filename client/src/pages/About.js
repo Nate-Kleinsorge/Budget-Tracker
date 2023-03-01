@@ -1,5 +1,11 @@
+import { Helmet } from "react-helmet-async";
+
 export default function About () {
     return (
+        <>
+        <Helmet >
+            <title>Budget Tracker | About</title>
+        </Helmet>
         <div className="container">
             <div className="flex">
                 <div className="flex-column">
@@ -8,5 +14,6 @@ export default function About () {
                 </div>
             </div>
         </div>
+        </>
     );
 }
