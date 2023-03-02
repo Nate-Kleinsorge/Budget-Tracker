@@ -6,97 +6,34 @@ export default function Budget () {
         <Helmet >
             <title>Budget Tracker | Budget</title>
         </Helmet>
+        <div className="container">
         <form>
-            <div className="container">
-                <div className="flex">
-                    <div className="flex-row flex-wrap">
-                    <label className="p-2">
-                        Monthly Income:  
-                        <input
-                            name="income"
-                            type="number">
-                        </input>
-                    </label>
-                    <br />
-                    </div>
-                </div>
+            <div className="form-group">
+                <label for="monthIncome">Enter Monthly Income: </label>
+                <input type="number" className="form-control col-sm" id="monthIncome"></input>
             </div>
-            <div className="container">
-                <div className="flex">
-                    <div className="flex-row flex-wrap">
-                    <label>
-                        Estimated Housing Costs:  
-                        <input
-                            name="houseCost"
-                            type="number">
-                        </input>
-                    </label>
-                    <br />
-                    </div>
-                </div>
+            <div className="form-group">
+                <label for="houseCost">Estimated Housing cost per month: </label>
+                <input type="number" className="form-control col-sm" id="houseCost"></input>
             </div>
-            <br />
-            <div className="container">
-                <div className="flex">
-                    <div className="flex-row flex-wrap">
-                    <label>
-                        Estimated Grocery Costs:  
-                        <input
-                            name="foodCost"
-                            type="number">
-                        </input>
-                    </label>
-                    <br />
-                    </div>
-                </div>
+            <div className="form-group">
+                <label for="foodCost">Estimated Grocery cost per month: </label>
+                <input type="number" className="form-control col-sm" id="foodCost"></input>
             </div>
-            <br />
-            <div className="container">
-                <div className="flex">
-                    <div className="flex-row flex-wrap">
-                    <label>
-                        Estimated Gas Costs:  
-                        <input
-                            name="gasCost"
-                            type="number">
-                        </input>
-                    </label>
-                    <br />
-                    </div>
-                </div>
+            <div className="form-group">
+                <label for="gasCost">Estimated Gas cost per month: </label>
+                <input type="number" className="form-control col-sm" id="gasCost"></input>
             </div>
-            <br />
-            <div className="container">
-                <div className="flex">
-                    <div className="flex-row flex-wrap">
-                    <label>
-                        Estimated Streaming Service Costs:  
-                        <input
-                            name="gasCost"
-                            type="number">
-                        </input>
-                    </label>
-                    <br />
-                    </div>
-                </div>
+            <div className="form-group">
+                <label for="streamCost">Estimated Streaming Serveice costs per month: </label>
+                <input type="number" className="form-control col-sm" id="streamCost"></input>
             </div>
-            <br />
-            <div className="container">
-                <div className="flex">
-                    <div className="flex-row flex-wrap">
-                    <label>
-                        Other Estimated Costs:  
-                        <input
-                            name="otherCost"
-                            type="number">
-                        </input>
-                    </label>
-                    <br />
-                    </div>
-                </div>
+            <div className="form-group">
+                <label for="otherCosts">Estimated other costs per month: </label>
+                <input type="number" className="form-control col-sm" id="otherCosts"></input>
             </div>
-            <br />
-        </form>    
+        </form>
+        </div>
         </>
     );
 }

@@ -24,7 +24,7 @@ const server = new ApolloServer({
 await mongoose.connect(MONGODB_URI);
 await server.start();
 
-app.use(express.static(BUILD_PATH))
+app.use(express.static(BUILD_PATH));
 app.use('/graphql', express.json(), expressMiddleware(server));
 
 httpServer.listen({  port: PORT }, () => {
