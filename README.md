@@ -11,7 +11,7 @@
 ## Credits
 
 Contributors: 
-[Nate](https://github.com/yeezyhub), 
+[Nate](https://github.com/Nate-Kleinsorge), 
 [Ethan](https://github.com/edogtheninja),
 [Cody](https://github.com/codyrhunt77), 
 [Noah](https://github.com/Zeladras),
