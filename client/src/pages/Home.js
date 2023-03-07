@@ -30,8 +30,13 @@ export default function Home () {
                     </div>
                 </div>
             </div>
+            <div className="Parallax__content__heading">
+                <h1 className="Parallax__content__heading__text"></h1>
+                <h2 className="Parallax__content__heading__caption"></h2>
+            </div>
         </section>
         </header>
         </>
     );
 }
+
