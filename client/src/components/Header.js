@@ -19,7 +19,7 @@ export default function Header () {
                             <Link to="/budget" className='nav-link text-black'>Budget</Link>
                         </li>
                         <li class="nav-item">
-                            <Link to="/login" className='nav-link text-black'>login</Link>
+                            <Link to="/login" className='nav-link'>Login</Link>
                         </li>
                     </ul>
                 </div>
