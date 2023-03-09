@@ -1,6 +1,5 @@
 import bcrypt from 'bcrypt';
 import mongoose from 'mongoose';
-//import isEmail from 'validator';
 
 const SALT_ROUNDS = 10;
 
@@ -9,21 +8,35 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-       // validate: isEmail, 
     },
     password: {
         type: String,
         required: true,
-        minlength: [6 , 'Minimum password length is 6 characters.'],
+        minlength: 5,
     },
-    firstName: {
-        type: String,
-        required: true,
-    },lastName: {
-        type: String,
-        required: true,
-    },
-
+    userData: [
+        {
+            monthIncome: {
+                type: Number,
+                required: true,
+            },
+            houseCost: {
+                type: Number,
+            },
+            groceryCost: {
+                type: Number,
+            },
+            gasCost: {
+                type: Number,
+            },
+            streamCost: {
+                type: Number,
+            },
+            otherCost: {
+                type: Number,
+            }
+        }
+    ],
 });
 
 userSchema.pre("save", async function (next) {
@@ -34,7 +47,7 @@ userSchema.pre("save", async function (next) {
     next();
 });
 
-userSchema.methods.isCorrectPassword = async function (password) {
+userSchema.method.isCorrectPassword = async function (password) {
     return await bcrypt.compare(password, this.password);
 };
 

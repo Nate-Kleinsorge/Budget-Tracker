@@ -1,5 +1,4 @@
-import { gql } from 'apollo-server-express';
-const typeDefs =  gql`
+const typeDefs =  `#graphql
 
   type User {
     _id: ID
@@ -18,19 +17,14 @@ const typeDefs =  gql`
     otherCost: String
   }
 
-  type Auth {
-    token: ID!
-    
-  }
-
   type Query {
     users: [User]!
     user(userId: ID!): User
   }
 
   type Mutation {
-    addUser(firstName: String!, lastName: String!, email: String!, password: String!): User
-    login(email: String! , password: String!): Auth
+    addUser(email: String!, password: String!): User
+    addUserData(userId: ID!, monthIncome: String!, houseCost: String, groceryCost: String, gasCost: String, streamCost: String, otherCost: String): User
   }
 `
 export default typeDefs;
