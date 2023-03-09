@@ -44,9 +44,11 @@ body {
     }
 
     &__heading {
-      background-color: #fff;
-      width: 40%;
+      background-color: transparent!important;
+     /* width: 40%; */
       padding: 40px;
+      border-style: solid;
+      border-color: #ff737e transparent transparent transparent;
 
       &__text {
         margin: 10px 0;
@@ -61,7 +63,7 @@ body {
 
     &__cta {
       background-color: #ff737e;
-      width: 60%;
+    /*  width: 60%; */
       padding: 40px;
 
       font-size: 20px;

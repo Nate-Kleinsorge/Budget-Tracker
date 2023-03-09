@@ -7,7 +7,7 @@ import Dashboard from 'pages/Dashboard.js';
 import Budget from 'pages/Budget.js';
 import Login from 'pages/Login.js';
 import { useEffect, useState } from 'react';
-import "./App.scss"
+import "App.scss";
 
 function App() {
   const [offsetY, setOffsetY] = useState(0);
