@@ -9,7 +9,7 @@ export default function Login () {
         <div className="container">
             <div className="flex">
                 <div className="flex-column">
-                    <h1>About us</h1>
+                    <h1>Login</h1>
                     <h3>coming soon</h3>
                 </div>
             </div>
