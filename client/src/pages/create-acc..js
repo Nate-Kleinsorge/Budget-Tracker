@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {useAuth} from 'utils/auth.js';
 
 
-export default function SighnUp() {
+export default function SignUp() {
   const {handleSignUp} = useAuth();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
