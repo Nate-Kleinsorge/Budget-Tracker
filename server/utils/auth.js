@@ -4,8 +4,6 @@ import { JWT_SECRET , JWT_EXPIRATION } from "../config.js";
   const payload = { firstName, email, _id };
   return jwt.sign({ data: payload }, JWT_SECRET, { expiresIn: JWT_EXPIRATION });
 }
-
-
 export default {
   authMiddleware: function ({ req }) {
     let token = req.body.token || req.query.token || req.headers.authorization;

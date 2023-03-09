@@ -4,26 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { LOGIN } from './mutations';
 import { ADD_USER } from './mutations';
 import { createContext, useContext, useEffect, useState } from 'react';
-////import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
-//import { setContext } from '@apollo/client/link/context';
-
-//const httpLink = createHttpLink({
- // uri: '/graphql',
-//});
-//const authLink = setContext((_, { headers }) => {
- // const token = localStorage.getItem('token');
-
- // return {
- //   headers: {
-  //    ...headers,
-   //   authorization: token ? `user ${token}` : "",
-  //  }
- // }
-//});
-//const client = new ApolloClient({
- // link: authLink.concat(httpLink),
- // cache: new InMemoryCache()
-//});
 const AuthContext = createContext();
 const useAuth = () => useContext(AuthContext);
 const setStoredJwtToken = (token) => sessionStorage.setItem('jwt' , token);

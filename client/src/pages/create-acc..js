@@ -32,8 +32,6 @@ export default function SignUp() {
             value={firstName}
             onChange={(event) => setFirstName(event.target.value)}
           />
-       
-       
           <label htmlFor="lastName">Last Name:</label>
           <input
             placeholder="Last"
@@ -42,9 +40,7 @@ export default function SignUp() {
             required
             value={lastName}
             onChange={(event) => setLastName(event.target.value)}
-          />
-       
-        
+          />             
           <label htmlFor="email">Email:</label>
           <input
             placeholder="Enter email"
@@ -54,8 +50,6 @@ export default function SignUp() {
             value={email}
             onChange={(event) => setEmail(event.target.value)}
           />
-       
-        
           <label htmlFor="pwd">Password:</label>
           <input
             placeholder="*********"
@@ -65,10 +59,7 @@ export default function SignUp() {
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
-       
-      
-          <input type="submit"/>
-        
+          <input type="submit"/> 
       </form>
       </section>
       </>

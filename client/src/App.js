@@ -10,7 +10,6 @@ import SignUp from 'pages/create-acc.';
 import { useEffect, useState } from 'react';
 import "./App.scss"
 import { AuthProvider } from 'utils/auth';
-
 function App() {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
