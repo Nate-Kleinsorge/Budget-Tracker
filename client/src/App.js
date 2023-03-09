@@ -6,8 +6,10 @@ import Home from 'pages/Home.js';
 import Dashboard from 'pages/Dashboard.js';
 import Budget from 'pages/Budget.js';
 import Login from 'pages/Login.js';
+import SignUp from 'pages/create-acc.js';
 import { useEffect, useState } from 'react';
 import "App.scss";
+import { AuthProvider } from 'utils/auth.js';
 
 function App() {
   const [offsetY, setOffsetY] = useState(0);
@@ -24,6 +26,7 @@ function App() {
         <title>Budget Tracker</title>
       </Helmet>
       <BrowserRouter>
+      <AuthProvider>
         <Header />
         <main>
           <Routes>
@@ -31,9 +34,11 @@ function App() {
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/budget' element={<Budget />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/create-acc' element={<SignUp />}/>
           </Routes>
         </main>
         <Footer />
+        </AuthProvider>
       </BrowserRouter>
     </HelmetProvider>)
 
