@@ -14,29 +14,7 @@ const userSchema = new mongoose.Schema({
         required: true,
         minlength: 5,
     },
-    userData: [
-        {
-            monthIncome: {
-                type: Number,
-                required: true,
-            },
-            houseCost: {
-                type: Number,
-            },
-            groceryCost: {
-                type: Number,
-            },
-            gasCost: {
-                type: Number,
-            },
-            streamCost: {
-                type: Number,
-            },
-            otherCost: {
-                type: Number,
-            }
-        }
-    ],
+    userData: [],
 });
 
 userSchema.pre("save", async function (next) {
