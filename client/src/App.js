@@ -63,3 +63,35 @@ function App() {
 
 
 export default App;
+
+
+
+// import React, { useState } from 'react';
+// import BarChart from './components/BarChart';
+// import { incomeData } from  './Data';
+
+
+// function App() {
+//   const [totalIncome, setTotalIncome] = useState({
+//     labels: incomeData.map((data) => data.month),
+//     datasets: [{
+//       label: 'Total Income',
+//       data: incomeData.map((data) => data.amount),
+//     }]
+//   })
+
+//   return (
+//     <div>
+//       <p>Bar Chart</p>
+//       <BarChart Data={totalIncome} />
+//     </div>
+//   );
+// }
+
+
+// export default App;
+
+
+
+
+
